@@ -16,13 +16,14 @@ import logging
 from collections import OrderedDict
 import multiprocessing
 import numpy as np
-import tensorflow as tf
+
 import keras
 import keras.backend as K
 import keras.layers as KL
 import keras.engine as KE
 import keras.models as KM
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from mrcnn import utils
 
 # Requires TensorFlow 1.3+ and Keras 2.0.8+.
